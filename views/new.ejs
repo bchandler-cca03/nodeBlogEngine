@@ -1,0 +1,46 @@
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <title>New Post</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body> -->
+
+<% include partials/iheader.ejs %>
+
+<form action="/posts" method="post">
+    <fieldset>
+        <legend>Careful!</legend>
+
+    <div>
+        <label for="title">Title</label>
+        <input type="text" id="title" name="title">
+    </div>
+    <div>
+        <label for="permalink">Permalink</label>
+        <input type="text" id="permalink" name="permalink">
+    </div>
+    <div>
+        <label for="content">Content</label>
+        <textarea rows="5" id="content" name="content">Input new post here ...</textarea>
+    </div>
+    <div>
+        <label for="passPhrase">Secret Phrase</label>
+        <input type="text" id="passPhrase" name="passPhrase">
+    </div>
+    <div class="button">
+        <button type="submit">Publish</button>
+    </div>
+
+</fieldset>
+
+</form>
+
+</body>
+<footer>
+  <span>&copy Code Career Academy 2017</span>
+</footer>
+</html>
+
+
+<!-- <% include partials/ifooter.ejs %>  -->

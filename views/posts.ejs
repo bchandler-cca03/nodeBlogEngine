@@ -1,0 +1,30 @@
+<% include partials/pheader.ejs %>
+
+    <h1>Show All Posts</h1>
+    <h2>Inside the Posts Show Page</h2>
+
+    <div>
+
+    <% for (var i = 0; i < postsArray.length; i++){  %>
+    <div class="blog-post">
+        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+        <div>
+            <h1 class="blog-post-title"><a href="/show/<%=postsArray[i].permalink%>"><%- postsArray[i].title   %></a></h1>
+            <div>
+                <%- postsArray[i].content     %>
+            </div>
+            <!-- TODO: Add link to update post -->
+            <h6><a href="/update/<%=postsArray[i].permalink%>">Update</a></h6>
+            <h6><a href="/del/<%=postsArray[i].permalink%>">Delete</a></h6>
+        </div>
+    </div> 
+    <% };  %>
+
+    
+        <ul style="list-style: none">
+            <li><a href="/">to Landing</a></li>
+            <li><a href="/posts/new">New Post</a></li>
+        </ul>
+    </div>
+
+<% include partials/pfooter.ejs %>    

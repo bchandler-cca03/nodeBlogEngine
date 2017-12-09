@@ -1,0 +1,29 @@
+<% include partials/pheader.ejs %>
+
+    <h1>Show a Post</h1>
+
+    <div>
+
+        <div class="blog-post">
+            <div>
+                <h1 class="blog-post-title"><%- post.title %></h1>
+                <div>
+                    <p>
+                    <%- post.content %>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <ul style="list-style: none">
+            <li>
+                <a href="/posts">to Post Summary</a>
+            </li>
+            <li>
+                <a href="/posts/new">New Post</a>
+            </li>
+        </ul>
+
+    </div>
+
+    <% include partials/pfooter.ejs %>

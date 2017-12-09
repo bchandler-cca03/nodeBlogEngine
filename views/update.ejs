@@ -1,0 +1,31 @@
+<% include partials/iheader.ejs %>
+
+<form action="/update" method="post">
+    <fieldset>
+        <legend>Update</legend>
+
+    <div>
+        <label for="title">Title</label>
+        <input type="text" id="title" name="title" value="<%= post.title %>">
+    </div>
+    <div>
+        <label for="permalink">Permalink</label>
+         <input type="text" id="permalink" name="permalink" value="<%= post.permalink %>">
+    </div>
+    <div>
+        <label for="content">Content</label>
+        <textarea rows="5" id="content" name="content"><%= post.content %></textarea>
+    </div>
+    <div>
+        <label for="passPhrase">Secret Phrase</label>
+        <input type="text" id="passPhrase" name="passPhrase">
+    </div>
+    <div class="button">
+        <button type="submit">Update</button>
+    </div>
+
+</fieldset>
+
+</form>
+
+<% include partials/ifooter.ejs %>
